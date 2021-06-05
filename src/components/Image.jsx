@@ -8,14 +8,18 @@ const Image =(props)=>{
     let[Imagesize, setImage] = useState(props.w);
 
 const IncreaseImg =() =>{
-   setImage(Imagesize="400px")
-   
-   //console.log(props.w)
-   //console.log(Imagesize)
+    const widthValue= parseInt(props.w);
+   // console.log(widthValue)
+   setImage(Imagesize=widthValue +0.2*widthValue)
+
+  // console.log(Imagesize)
 } 
 
 const DecreaseImg =() =>{
-    setImage(Imagesize="100px") 
+    const widthValue= parseInt(props.w);
+    //console.log(widthValue)
+    setImage(Imagesize=widthValue -0.2*widthValue) 
+    //console.log(Imagesize)
  }
 
     return (
